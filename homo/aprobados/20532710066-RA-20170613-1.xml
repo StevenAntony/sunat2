@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<VoidedDocuments xmlns="urn:sunat:names:specification:ubl:peru:schema:xsd:VoidedDocuments-1" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:sac="urn:sunat:names:specification:ubl:peru:schema:xsd:SunatAggregateComponents-1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ext:UBLExtensions>
+        <ext:UBLExtension>
+            <ext:ExtensionContent>
+            <ds:Signature Id="SignSUNAT">
+  <ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+    <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+  <ds:Reference URI=""><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>2EU4kMz6TCwvz4FO2szAKyLFTGo=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>k0XzzeOue5163YAQbgQeBBQHlIllOb25Y93PSbu6mrqm1S4dHU/KgZMGC2WRUCMGenqgrrKcfTfujTSq7f13rsUnJ7XYSAA2bLY4ZXdX7FQbu1DjE493h6zmZs8PheB+len/83djm2NSAANM+TVtjucHK4D9gqp6JRwXVVrCgUNjAVNVU+2szsky1k/mOiJd7VONDRJX3gAZnirska3ZLG01zHQ5Aa23jOwwbBt8ZEie8+L5rz/vi7+Rv+DQ+6RAArVQBeLMc7uAun0iP00Wxi2fE8xoBVUk13JQ2157NHLDlNCwj4KdOv2gZ30Vvp6Ijg1hPVz6GJn4FewzKu6Exw==</ds:SignatureValue>
+<ds:KeyInfo><ds:X509Data><ds:X509SubjectName>emailAddress=sistemas@surmotriz.com,CN=LUIS EDUARDO AMES ZUÑIGA,OU=DNI 00431156 RUC 20532710066,OU=DNI 00431156 RUC 20532710066,O=SURMOTRIZ SRL,L=TACNA,ST=TACNA,C=PE</ds:X509SubjectName><ds:X509Certificate>MIIFiTCCBHGgAwIBAgIMEmBEggHEXE+3x+B9MA0GCSqGSIb3DQEBBQUAMFQxCzAJBgNVBAYTAkJFMRkwFwYDVQQKExBHbG9iYWxTaWduIG52LXNhMSowKAYDVQQDEyFHbG9iYWxTaWduIFBlcnNvbmFsU2lnbiAyIENBIC0gRzMwHhcNMTYxMDE0MjAyODU4WhcNMTcxMDE1MjAyODU4WjCB3jELMAkGA1UEBhMCUEUxDjAMBgNVBAgTBVRBQ05BMQ4wDAYDVQQHEwVUQUNOQTEWMBQGA1UEChMNU1VSTU9UUklaIFNSTDElMCMGA1UECxMcRE5JIDAwNDMxMTU2IFJVQyAyMDUzMjcxMDA2NjElMCMGA1UECxMcRE5JIDAwNDMxMTU2IFJVQyAyMDUzMjcxMDA2NjEiMCAGA1UEAwwZTFVJUyBFRFVBUkRPIEFNRVMgWlXDkUlHQTElMCMGCSqGSIb3DQEJARYWc2lzdGVtYXNAc3VybW90cml6LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJ9Yh0wIdXCb0v3kFt/3m/cDAtLzvZeWD4P83ITVLOqITyXb2x4FZbfKHRhExhhuA4wAzdRFIwtihSY2Oh/mWABmZB+f1SPMUHkE05lHyBn9gVkBoAJyiL3b0bjIk3vpf65MdhSwRA5Co+RspxSGDXBjUrUo35HOYX4aT1BtkSIqPh+grVm5BeXsgttYUZz7c0KmRTZWamXHEwq7e7b4/6xyz7HvGXSIION0MmeD3WcVg9cbjX/NVNHPpTnmwFdxe3Z5nvzfONPkhk/ckxzJGEPFmNZC8TdgfDZ18i2msqXRhFa/bJ/Wr+1no61jWbXsEoWC9eFfcrlQSVCtWsqKf8cCAwEAAaOCAc4wggHKMA4GA1UdDwEB/wQEAwIFoDCBlgYIKwYBBQUHAQEEgYkwgYYwSQYIKwYBBQUHMAKGPWh0dHA6Ly9zZWN1cmUuZ2xvYmFsc2lnbi5jb20vY2FjZXJ0L2dzcGVyc29uYWxzaWduMmczb2NzcC5jcnQwOQYIKwYBBQUHMAGGLWh0dHA6Ly9vY3NwMi5nbG9iYWxzaWduLmNvbS9nc3BlcnNvbmFsc2lnbjJnMzBNBgNVHSAERjBEMEIGCisGAQQBoDIBKAowNDAyBggrBgEFBQcCARYmaHR0cHM6Ly93d3cuZ2xvYmFsc2lnbi5jb20vcmVwb3NpdG9yeS8wCQYDVR0TBAIwADBDBgNVHR8EPDA6MDigNqA0hjJodHRwOi8vY3JsLmdsb2JhbHNpZ24uY29tL2dzL2dzcGVyc29uYWxzaWduMmczLmNybDAhBgNVHREEGjAYgRZzaXN0ZW1hc0BzdXJtb3RyaXouY29tMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDBDAdBgNVHQ4EFgQU2lnDEKJgebtWXhc+sAd25cX4KTAwHwYDVR0jBBgwFoAUZDeVt4FE41qdeCyyA1E5nb0ByVEwDQYJKoZIhvcNAQEFBQADggEBAGZ4HQD3TiDlVkF+na1kPMBFeSvkDSLOeK/MjugM/C+LUYyGNY3Kk6qmiC0VJCVDy15Nza+6/yYy1pyJRM454fpkjir2MKeVk9Ycw5Q2zjR72SncCP4v+R5U2sUv/3pyeEYMap8z+BAV0o5lDzGL5MqL/KiydulftOzz79kCX4SzVdc7dKxp60p/OJK4K6t4qKXOmLFjpcNVBV7qm8t1iN8q2qo9rfTaU4Oj54h0SiKcwM+opYTd41Pk7EWdktJsm6lRUF6mm8hyoob12lwNVl3pOUUIIVU3W+YmJpEvnS4I740LT+t/ivarogKF43ShA5GLLOUa0m2fmAvBqd9G+pE=</ds:X509Certificate></ds:X509Data></ds:KeyInfo></ds:Signature></ext:ExtensionContent>
+        </ext:UBLExtension>
+    </ext:UBLExtensions>
+    <cbc:UBLVersionID>2.0</cbc:UBLVersionID>
+    <cbc:CustomizationID>1.0</cbc:CustomizationID>
+    <cbc:ID>RA-20170613-1</cbc:ID>
+    <cbc:ReferenceDate>2017-06-10</cbc:ReferenceDate>
+    <cbc:IssueDate>2017-06-13</cbc:IssueDate>
+    <cac:Signature>
+        <cbc:ID>20532710066_2</cbc:ID>
+        <cac:SignatoryParty>
+            <cac:PartyIdentification>
+                <cbc:ID>20532710066</cbc:ID>
+            </cac:PartyIdentification>
+            <cac:PartyName>
+                <cbc:Name><![CDATA[INVERSIONES BRUVAL SAC]]></cbc:Name>
+            </cac:PartyName>
+        </cac:SignatoryParty>
+        <cac:DigitalSignatureAttachment>
+            <cac:ExternalReference>
+                <cbc:URI>#20532710066</cbc:URI>
+            </cac:ExternalReference>
+        </cac:DigitalSignatureAttachment>
+    </cac:Signature>
+    <cac:AccountingSupplierParty>
+        <cbc:CustomerAssignedAccountID>20532710066</cbc:CustomerAssignedAccountID>
+        <cbc:AdditionalAccountID>6</cbc:AdditionalAccountID>
+        <cac:Party>
+            <cac:PartyName>
+                <cbc:Name><![CDATA[-]]></cbc:Name>
+            </cac:PartyName>
+            <cac:PartyLegalEntity>
+                <cbc:RegistrationName>SURMOTRIZ S.R.L.</cbc:RegistrationName>
+            </cac:PartyLegalEntity>
+        </cac:Party>
+    </cac:AccountingSupplierParty>
+    <sac:VoidedDocumentsLine>
+        <cbc:LineID>5</cbc:LineID>
+        <cbc:DocumentTypeCode>01</cbc:DocumentTypeCode>
+        <sac:DocumentSerialID>FF11</sac:DocumentSerialID>
+        <sac:DocumentNumberID>10</sac:DocumentNumberID>
+        <sac:VoidReasonDescription>ERRRORRRR EMISION</sac:VoidReasonDescription>
+    </sac:VoidedDocumentsLine>
+    <sac:VoidedDocumentsLine>
+        <cbc:LineID>4</cbc:LineID>
+        <cbc:DocumentTypeCode>01</cbc:DocumentTypeCode>
+        <sac:DocumentSerialID>FF11</sac:DocumentSerialID>
+        <sac:DocumentNumberID>8</sac:DocumentNumberID>
+        <sac:VoidReasonDescription>ERRRORRRR EMISION</sac:VoidReasonDescription>
+    </sac:VoidedDocumentsLine>
+    <sac:VoidedDocumentsLine>
+        <cbc:LineID>3</cbc:LineID>
+        <cbc:DocumentTypeCode>01</cbc:DocumentTypeCode>
+        <sac:DocumentSerialID>FF11</sac:DocumentSerialID>
+        <sac:DocumentNumberID>1</sac:DocumentNumberID>
+        <sac:VoidReasonDescription>ERRRORRRR EMISION</sac:VoidReasonDescription>
+    </sac:VoidedDocumentsLine>
+    <sac:VoidedDocumentsLine>
+        <cbc:LineID>2</cbc:LineID>
+        <cbc:DocumentTypeCode>01</cbc:DocumentTypeCode>
+        <sac:DocumentSerialID>FF11</sac:DocumentSerialID>
+        <sac:DocumentNumberID>4</sac:DocumentNumberID>
+        <sac:VoidReasonDescription>ERRRORRRR EMISION</sac:VoidReasonDescription>
+    </sac:VoidedDocumentsLine>
+    <sac:VoidedDocumentsLine>
+        <cbc:LineID>1</cbc:LineID>
+        <cbc:DocumentTypeCode>01</cbc:DocumentTypeCode>
+        <sac:DocumentSerialID>FF11</sac:DocumentSerialID>
+        <sac:DocumentNumberID>5</sac:DocumentNumberID>
+        <sac:VoidReasonDescription>ERRRORRRR EMISION</sac:VoidReasonDescription>
+    </sac:VoidedDocumentsLine>
+</VoidedDocuments>

@@ -43,27 +43,32 @@ $Invoice->setAttribute('xmlns:sac', "urn:sunat:names:specification:ubl:peru:sche
 //$Invoice->setAttribute('xmlns:schemaLocation', "urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 ../xsd/maindoc/UBLPE-Invoice-1.0.xsd");
 $Invoice->setAttribute('xmlns:udt', "urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2");
 
-$UBLExtension = $xml->createElement('ext:UBLExtensions'); $UBLExtension = $Invoice->appendChild($UBLExtension);
+    $UBLExtension = $xml->createElement('ext:UBLExtensions'); $UBLExtension = $Invoice->appendChild($UBLExtension);
+        // 18.- Total valor de venta - operaciones gravadas
+        // 19.- Total valor de venta - operaciones inafectas
+        // 20.- Total valor de venta - operaciones exoneradas
+        // 49.- Total valor de venta - operaciones gratuitass
+        $ext = $xml->createElement('ext:UBLExtension'); $ext = $UBLExtension->appendChild($ext);
+            $contents = $xml->createElement('ext:ExtensionContent'); $contents = $ext->appendChild($contents);
+                $sac = $xml->createElement('sac:AdditionalInformation'); $sac = $contents->appendChild($sac);
+                    // el 2005 es Total descuentos
+                    $monetary = $xml->createElement('sac:AdditionalMonetaryTotal'); $monetary = $sac->appendChild($monetary);
+                        $cbc = $xml->createElement('cbc:ID', '2005'); $cbc = $monetary->appendChild($cbc);
+                        $cbc = $xml->createElement('cbc:PayableAmount', $c34); $cbc = $monetary->appendChild($cbc); $cbc->setAttribute('currencyID', "PEN");
 
-// 18.- Total valor de venta - operaciones gravadas
-// 19.- Total valor de venta - operaciones inafectas
-// 20.- Total valor de venta - operaciones exoneradas
-// 49.- Total valor de venta - operaciones gratuitass
-$ext = $xml->createElement('ext:UBLExtension'); $ext = $UBLExtension->appendChild($ext);
-$contents = $xml->createElement('ext:ExtensionContent'); $contents = $ext->appendChild($contents);
-$sac = $xml->createElement('sac:AdditionalInformation'); $sac = $contents->appendChild($sac);
-// el 2005 es Total descuentos
-$monetary = $xml->createElement('sac:AdditionalMonetaryTotal'); $monetary = $sac->appendChild($monetary);
-$cbc = $xml->createElement('cbc:ID', '2005'); $cbc = $monetary->appendChild($cbc);
-$cbc = $xml->createElement('cbc:PayableAmount', $c34); $cbc = $monetary->appendChild($cbc); $cbc->setAttribute('currencyID', "PEN");
-// el 1001 total velor venta - operaciones gravadas
-$monetary = $xml->createElement('sac:AdditionalMonetaryTotal'); $monetary = $sac->appendChild($monetary);
-$cbc = $xml->createElement('cbc:ID', '1001'); $cbc = $monetary->appendChild($cbc);
-$cbc = $xml->createElement('cbc:PayableAmount', $c31); $cbc = $monetary->appendChild($cbc); $cbc->setAttribute('currencyID', "PEN");
-// el 1002 total valor venta - operaciones inafectas
-$monetary = $xml->createElement('sac:AdditionalMonetaryTotal'); $monetary = $sac->appendChild($monetary);
-$cbc = $xml->createElement('cbc:ID', '1002'); $cbc = $monetary->appendChild($cbc);
-$cbc = $xml->createElement('cbc:PayableAmount', $c28); $cbc = $monetary->appendChild($cbc); $cbc->setAttribute('currencyID', "PEN");
+                    // 1000 leyenda
+                    $monetary = $xml->createElement('sac:AdditionalProperty'); $monetary = $sac->appendChild($monetary);
+                        $cbc = $xml->createElement('cbc:ID', '1000'); $cbc = $monetary->appendChild($cbc);
+                        $cbc = $xml->createElement('cbc:Value', 'leyenda'); $cbc = $monetary->appendChild($cbc);
+
+                    // el 1001 total velor venta - operaciones gravadas
+                    $monetary = $xml->createElement('sac:AdditionalMonetaryTotal'); $monetary = $sac->appendChild($monetary);
+                        $cbc = $xml->createElement('cbc:ID', '1001'); $cbc = $monetary->appendChild($cbc);
+                        $cbc = $xml->createElement('cbc:PayableAmount', $c31); $cbc = $monetary->appendChild($cbc); $cbc->setAttribute('currencyID', "PEN");
+                    // el 1002 total valor venta - operaciones inafectas
+                    $monetary = $xml->createElement('sac:AdditionalMonetaryTotal'); $monetary = $sac->appendChild($monetary);
+                        $cbc = $xml->createElement('cbc:ID', '1002'); $cbc = $monetary->appendChild($cbc);
+                        $cbc = $xml->createElement('cbc:PayableAmount', $c28); $cbc = $monetary->appendChild($cbc); $cbc->setAttribute('currencyID', "PEN");
 // el 1003 total valor venta - operaciones exoneradas
 $monetary = $xml->createElement('sac:AdditionalMonetaryTotal'); $monetary = $sac->appendChild($monetary);
 $cbc = $xml->createElement('cbc:ID', '1003'); $cbc = $monetary->appendChild($cbc);
@@ -160,6 +165,7 @@ $cac_accounting = $xml->createElement('cac:AccountingSupplierParty'); $cac_accou
             // nombre o razon zocial
             $legal = $xml->createElement('cac:PartyLegalEntity'); $legal = $cac_party->appendChild($legal);
                 $cbc = $xml->createElement('cbc:RegistrationName', $c7); $cbc = $legal->appendChild($cbc);
+
 
 
 // anticipos

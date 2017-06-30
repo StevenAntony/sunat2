@@ -2,7 +2,7 @@
 
 // 5.- Generar PDF y codigo de barras
 // ==================================
-
+header('Content-Type: text/html; charset=UTF-8');
 require("./fpdf/fpdf.php");
 require_once ("./PDF417/vendor/autoload.php");
 use BigFish\PDF417\PDF417;
@@ -75,6 +75,10 @@ $TotIGV = 0;
 $TotMonto = 0;
 // Obteniendo Fecha de emisión.
 $FecEmi = $DOM->getElementsByTagName('IssueDate')->item(0)->nodeValue;
+
+$time = strtotime($FecEmi);
+$FecEmi = date('d-m-Y',$time);
+
 // Obteniendo Codigo Hash.
 $CodHash = $DOM->getElementsByTagName('DigestValue')->item(0)->nodeValue;
 $textoCodBar =
@@ -416,6 +420,9 @@ foreach($DocXML as $Nodo){
     $i++;
 }
 
+$pdf->SetXY(1,$Y+8.5);
+$pdf->Cell(11, 0.5, utf8_decode('Son : '.$leyenda_100), 1, 1,'L', 0);
+
 $pdf->SetXY(12,$Y+8.5);
 $pdf->Cell(6, 0.5, utf8_decode("Sub Total ".$MonedaRes." : "), 1, 1,'R', 0);
 $pdf->SetXY(18,$Y+8.5);
@@ -447,7 +454,7 @@ $pdf->SetXY(18,$Y+11);
 $pdf->Cell(2, 0.5, number_format($operaciones_gratuitas,2), 1, 1,'R', 0);
 
 $pdf->SetXY(12,$Y+11.5);
-$pdf->Cell(6, 0.5, utf8_decode("I.G.V. ".$MonedaRes." : "), 1, 1,'R', 0);
+$pdf->Cell(6, 0.5, utf8_decode("I.G.V. 18% ".$MonedaRes." : "), 1, 1,'R', 0);
 $pdf->SetXY(18,$Y+11.5);
 $pdf->Cell(2, 0.5, number_format($total_igv_,2), 1, 1,'R', 0);
 

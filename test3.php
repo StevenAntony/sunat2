@@ -2,6 +2,7 @@
 
     // conexion
     require("app/coneccion.php");
+    require ("app/facturas/share/convertir_a_letras.php");
 
     // recoge datos de la url
     $gem = $_GET['gen'];

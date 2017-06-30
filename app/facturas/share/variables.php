@@ -1,6 +1,5 @@
 <?php
 
-
     if ( $cla_doc=='FS' || $cla_doc=='FR' || $cla_doc=='FC' || $cla_doc=='BS' || $cla_doc=='BR') {
 
         // obtener cabezera
@@ -230,6 +229,7 @@
     $c41 = '';
     $c42 = 'Total';
     $c43 = $cab['MTOIMPVENTA16'];
+    $leyenda_100 = convertir_a_letras($c43);
     $c44 = '';
 
 

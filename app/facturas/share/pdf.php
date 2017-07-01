@@ -195,7 +195,7 @@ $pdf->Cell(8, 0.25, utf8_decode($t_document), 0, 1,'C', 0);
 
 
 
-$num_doc = $DOM->getElementsByTagName('ID')->item(6)->nodeValue;
+$num_doc = $DOM->getElementsByTagName('ID')->item(7)->nodeValue;
 $pdf->SetTextColor(0,0,150);
 $pdf->SetFont('arial','',14);
 $pdf->SetXY(12,2.9);
@@ -421,7 +421,7 @@ foreach($DocXML as $Nodo){
 }
 
 $pdf->SetXY(1,$Y+8.5);
-$pdf->Cell(11, 0.5, utf8_decode('Son : '.$leyenda_100), 1, 1,'L', 0);
+$pdf->Cell(11, 0.5, utf8_decode('Son : '.strtoupper($leyenda_100)), 0, 1,'L', 0);
 
 $pdf->SetXY(12,$Y+8.5);
 $pdf->Cell(6, 0.5, utf8_decode("Sub Total ".$MonedaRes." : "), 1, 1,'R', 0);

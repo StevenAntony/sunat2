@@ -56,10 +56,7 @@ $Invoice->setAttribute('xmlns:udt', "urn:un:unece:uncefact:data:specification:Un
                         $cbc = $xml->createElement('cbc:ID', '2005'); $cbc = $monetary->appendChild($cbc);
                         $cbc = $xml->createElement('cbc:PayableAmount', $c34); $cbc = $monetary->appendChild($cbc); $cbc->setAttribute('currencyID', "PEN");
 
-                    // 1000 leyenda
-                    $monetary = $xml->createElement('sac:AdditionalProperty'); $monetary = $sac->appendChild($monetary);
-                        $cbc = $xml->createElement('cbc:ID', '1000'); $cbc = $monetary->appendChild($cbc);
-                        $cbc = $xml->createElement('cbc:Value', 'leyenda'); $cbc = $monetary->appendChild($cbc);
+
 
                     // el 1001 total velor venta - operaciones gravadas
                     $monetary = $xml->createElement('sac:AdditionalMonetaryTotal'); $monetary = $sac->appendChild($monetary);
@@ -69,21 +66,30 @@ $Invoice->setAttribute('xmlns:udt', "urn:un:unece:uncefact:data:specification:Un
                     $monetary = $xml->createElement('sac:AdditionalMonetaryTotal'); $monetary = $sac->appendChild($monetary);
                         $cbc = $xml->createElement('cbc:ID', '1002'); $cbc = $monetary->appendChild($cbc);
                         $cbc = $xml->createElement('cbc:PayableAmount', $c28); $cbc = $monetary->appendChild($cbc); $cbc->setAttribute('currencyID', "PEN");
-// el 1003 total valor venta - operaciones exoneradas
-$monetary = $xml->createElement('sac:AdditionalMonetaryTotal'); $monetary = $sac->appendChild($monetary);
-$cbc = $xml->createElement('cbc:ID', '1003'); $cbc = $monetary->appendChild($cbc);
-$cbc = $xml->createElement('cbc:PayableAmount', $c25); $cbc = $monetary->appendChild($cbc); $cbc->setAttribute('currencyID', "PEN");
-// el 1004 es operaciones gratuitas
-$monetary = $xml->createElement('sac:AdditionalMonetaryTotal'); $monetary = $sac->appendChild($monetary);
-$cbc = $xml->createElement('cbc:ID', '1004'); $cbc = $monetary->appendChild($cbc);
-$cbc = $xml->createElement('cbc:PayableAmount', $c22); $cbc = $monetary->appendChild($cbc); $cbc->setAttribute('currencyID', "PEN");
-// el 1005 es sub total es como el importe sin descuento el precio
-$monetary = $xml->createElement('sac:AdditionalMonetaryTotal'); $monetary = $sac->appendChild($monetary);
-$cbc = $xml->createElement('cbc:ID', '1005'); $cbc = $monetary->appendChild($cbc);
-$cbc = $xml->createElement('cbc:PayableAmount', $c37); $cbc = $monetary->appendChild($cbc); $cbc->setAttribute('currencyID', "PEN");
-// 2.- Firma electronica
-$ext = $xml->createElement('ext:UBLExtension'); $ext = $UBLExtension->appendChild($ext);
-$contents = $xml->createElement('ext:ExtensionContent', ' '); $contents = $ext->appendChild($contents);
+
+                    // el 1003 total valor venta - operaciones exoneradas
+                    $monetary = $xml->createElement('sac:AdditionalMonetaryTotal'); $monetary = $sac->appendChild($monetary);
+                        $cbc = $xml->createElement('cbc:ID', '1003'); $cbc = $monetary->appendChild($cbc);
+                        $cbc = $xml->createElement('cbc:PayableAmount', $c25); $cbc = $monetary->appendChild($cbc); $cbc->setAttribute('currencyID', "PEN");
+
+                    // el 1004 es operaciones gratuitas
+                    $monetary = $xml->createElement('sac:AdditionalMonetaryTotal'); $monetary = $sac->appendChild($monetary);
+                        $cbc = $xml->createElement('cbc:ID', '1004'); $cbc = $monetary->appendChild($cbc);
+                        $cbc = $xml->createElement('cbc:PayableAmount', $c22); $cbc = $monetary->appendChild($cbc); $cbc->setAttribute('currencyID', "PEN");
+
+                    // el 1005 es sub total es como el importe sin descuento el precio
+                    $monetary = $xml->createElement('sac:AdditionalMonetaryTotal'); $monetary = $sac->appendChild($monetary);
+                        $cbc = $xml->createElement('cbc:ID', '1005'); $cbc = $monetary->appendChild($cbc);
+                        $cbc = $xml->createElement('cbc:PayableAmount', $c37); $cbc = $monetary->appendChild($cbc); $cbc->setAttribute('currencyID', "PEN");
+
+                    // 1000 leyenda
+                    $monetary = $xml->createElement('sac:AdditionalProperty'); $monetary = $sac->appendChild($monetary);
+                        $cbc = $xml->createElement('cbc:ID', '1000'); $cbc = $monetary->appendChild($cbc);
+                        $cbc = $xml->createElement('cbc:Value', 'leyenda'); $cbc = $monetary->appendChild($cbc);
+
+        // 2.- Firma electronica
+        $ext = $xml->createElement('ext:UBLExtension'); $ext = $UBLExtension->appendChild($ext);
+            $contents = $xml->createElement('ext:ExtensionContent', ' '); $contents = $ext->appendChild($contents);
 
 // 36. Version del UBL
 $cbc = $xml->createElement('cbc:UBLVersionID', '2.0'); $cbc = $Invoice->appendChild($cbc);

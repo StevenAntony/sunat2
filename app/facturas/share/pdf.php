@@ -141,32 +141,32 @@ $pdf->image("./archs_graf/Membrete_Fact.jpg",1, 1, 10, 2.5);
 // Direccion surmotriz
 $pdf->SetTextColor(0,0,0);
 $pdf->SetFont('arial','',7);
-$pdf->SetXY(3.3,1.1);
+$pdf->SetXY(3.2,1.1);
 $pdf->Cell(1, 0.35, utf8_decode("PRINCIPAL: Av. Leguia 1870 Tacna. Telef.: (052) 426368 - 244015"), 0, 1,'L', 0);
 
 $pdf->SetTextColor(0,0,0);
 $pdf->SetFont('arial','',7);
-$pdf->SetXY(3.3,1.5);
-$pdf->Cell(1, 0.35, utf8_decode("Cel.:952869639 (Repuestos) Cel.: 992566630 (Servicio)"), 0, 1,'L', 0);
+$pdf->SetXY(3.2,1.5);
+$pdf->Cell(1, 0.35, utf8_decode("cel.:952869639 (repuestos) cel.: 992566630 (servicios)"), 0, 1,'L', 0);
 
 $pdf->SetTextColor(0,0,0);
 $pdf->SetFont('arial','',7);
-$pdf->SetXY(3.3,1.9);
-$pdf->Cell(1, 0.35, utf8_decode("RPM #945625993 email: tacna@surmotriz.com"), 0, 1,'L', 0);
+$pdf->SetXY(3.2,1.9);
+$pdf->Cell(1, 0.35, utf8_decode("email: tacna@surmotriz.com"), 0, 1,'L', 0);
 
 $pdf->SetTextColor(0,0,0);
 $pdf->SetFont('arial','',7);
-$pdf->SetXY(3.3,2.3);
-$pdf->Cell(1, 0.35, utf8_decode("SUCURSAL: Urb Vera Vera Mz C Lote 06 Moque. Mariscal Nieto"), 0, 1,'L', 0);
+$pdf->SetXY(3.2,2.3);
+$pdf->Cell(1, 0.35, utf8_decode("SUCURSAL: Sector Yaracachi Mz.D Lte.09 Mariscal Nieto/Moquegua"), 0, 1,'L', 0);
 
 $pdf->SetTextColor(0,0,0);
 $pdf->SetFont('arial','',7);
-$pdf->SetXY(3.3,2.7);
-$pdf->Cell(1, 0.35, utf8_decode("Telf (053) 792646 Cel 953922105 email: moquegua@surmotriz.com"), 0, 1,'L', 0);
+$pdf->SetXY(3.2,2.7);
+$pdf->Cell(1, 0.35, utf8_decode("Telef:(53) 479365 Cel: #953922105 email: moquegua@surmotriz.com"), 0, 1,'L', 0);
 
 $pdf->SetTextColor(0,0,0);
 $pdf->SetFont('arial','',7);
-$pdf->SetXY(3.3,3.1);
+$pdf->SetXY(3.2,3.1);
 $pdf->Cell(1, 0.35, utf8_decode("Reparacion y Mantenimiento con accesorios legitimos de Toyota."), 0, 1,'L', 0);
 
 
@@ -421,7 +421,7 @@ foreach($DocXML as $Nodo){
 }
 
 $pdf->SetXY(1,$Y+8.5);
-$pdf->Cell(11, 0.5, utf8_decode('Son : '.strtoupper($leyenda_100)), 0, 1,'L', 0);
+$pdf->Cell(11, 0.5, utf8_decode('Son : '.$leyenda_100), 0, 1,'L', 0);
 
 $pdf->SetXY(12,$Y+8.5);
 $pdf->Cell(6, 0.5, utf8_decode("Sub Total ".$MonedaRes." : "), 1, 1,'R', 0);

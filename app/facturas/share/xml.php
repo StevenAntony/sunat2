@@ -85,7 +85,7 @@ $Invoice->setAttribute('xmlns:udt', "urn:un:unece:uncefact:data:specification:Un
                     // 1000 leyenda
                     $monetary = $xml->createElement('sac:AdditionalProperty'); $monetary = $sac->appendChild($monetary);
                         $cbc = $xml->createElement('cbc:ID', '1000'); $cbc = $monetary->appendChild($cbc);
-                        $cbc = $xml->createElement('cbc:Value', 'leyenda'); $cbc = $monetary->appendChild($cbc);
+                        $cbc = $xml->createElement('cbc:Value', $leyenda_100); $cbc = $monetary->appendChild($cbc);
 
         // 2.- Firma electronica
         $ext = $xml->createElement('ext:UBLExtension'); $ext = $UBLExtension->appendChild($ext);

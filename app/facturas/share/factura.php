@@ -11,7 +11,12 @@
     <!-- Fecha y forma de pago -->
     <tr>
         <td colspan="1" width="15%"><?php echo $c2 ?></td>
-        <td colspan="2" width="35%"><?php echo $c3 ?></td>
+        <td colspan="2" width="35%">
+            <?php
+                $time = strtotime($c3 );
+                echo date('d-m-Y',$time);
+            ?>
+        </td>
         <td colspan="1" width="15%"><?php echo $c4 ?></td>
         <td colspan="3" width="35%" class="text-right"><?php echo $c5 ?></td>
     </tr>

@@ -29,7 +29,7 @@
 $xml = new DomDocument('1.0', 'ISO-8859-1');
 $xml->standalone         = false;
 $xml->preserveWhiteSpace = false;
-$Invoice = $xml->createElement('Invoice'); 
+$Invoice = $xml->createElement('Invoice');
 $Invoice = $xml->appendChild($Invoice);
 // Set the attributes.
 $Invoice->setAttribute('xmlns', 'urn:oasis:names:specification:ubl:schema:xsd:Invoice-2');
